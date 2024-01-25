@@ -119,6 +119,11 @@ body {
         justify-self: center;
         margin-block: 1rem;
 
+        & img {
+            height: 64px;
+            width: 64px;
+        }
+
         & .titulo {
             
             & h1 {
@@ -193,6 +198,11 @@ body {
     margin-block: 2rem;
     padding: 1rem;
     color: var(--clr-black);
+
+    img {
+        height: 64px;
+        width: 64px;
+    }
     
     h3 {
         font-size: 1.5rem;
