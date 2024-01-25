@@ -59,8 +59,13 @@ body {
         box-shadow: 0 0px 10px 8px rgba(0,0,0,.4);
     }
     
-    & i {
-        font-size: 2rem;
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 40px;
+        width: 40px;
     }
 
 }
@@ -95,8 +100,9 @@ body {
         justify-content: center;
         gap: 1rem;
 
-        & .phone {
-            font-size: 1.4rem;
+        img {
+            height: 32px;
+            width: 32px;
         }
 
         & .numeros {
@@ -253,6 +259,11 @@ body {
         justify-content:space-evenly;
         margin-block: 2rem;
 
+        img {
+            height: 32px;
+            width: 32px;
+        }
+
         & div{
             display: flex;
             flex-direction: column;
@@ -288,6 +299,7 @@ body {
 
     & span {
         opacity: .8;
+        margin-bottom: 1rem;
     }
 
     & .arrow-up{
@@ -299,7 +311,8 @@ body {
         cursor: pointer;
 
         & .arrow {
-            font-size: 2rem;
+            height: 32px;
+            width: 32px;
         }
     }
 }
@@ -409,10 +422,10 @@ body {
         right: 40px;
         height: 70px;
         width: 70px;
-        & i {
-            font-size: 2.4rem;
+        img {
+            width: 45px;
+            height: 45px;
         }
-    
     }
 }
 
