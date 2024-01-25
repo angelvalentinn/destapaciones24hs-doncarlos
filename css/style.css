@@ -106,7 +106,7 @@ body {
 
             & span {
                 cursor: pointer;
-
+                color: #fff;
                 &:hover {
                     text-decoration: underline;
                 }
