@@ -201,6 +201,7 @@ body {
 /* ----------- MAIN ----------- */
 
 .main {
+    height: 750px;
     margin-block: 2rem;
     padding: 1rem;
     color: var(--clr-black);
@@ -412,6 +413,10 @@ body {
             & div{
 
                 flex-direction: row;
+
+                span {
+                    margin: 0;
+                }
 
             }
         }
