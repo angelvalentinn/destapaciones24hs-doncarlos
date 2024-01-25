@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary: #D17542;
+    --clr-white: #e3e3e3;
+    --clr-black: #3D3535;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    text-align: center;
+    background-color: var(--clr-white);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--clr-white)
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--clr-primary);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--clr-black);
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #f1f1f1; 
+}
+
+/* ----------- WHATSAPP ICON ----------- */
+
+.pegado {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #1bd741;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 0px 10px 4px rgba(0,0,0,.4);
+    
+    &:hover {
+        transform: scale(1.02);
+        transition: .3s ease all;
+        box-shadow: 0 0px 10px 8px rgba(0,0,0,.4);
+    }
+    
+    & i {
+        font-size: 2rem;
+    }
+
+}
+
+/* ----------- HEADER ----------- */
+
+.hero {
+    min-height: 100vh;
+    padding: 1rem;
+    background-image: 
+    linear-gradient(
+        0deg,
+        rgba(0,0,0,.9),
+        rgba(0,0,0,.4)
+    ), url('../assets/background.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 50% 100%, 0 88%);
+
+    & .llamenos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        & .phone {
+            font-size: 1.4rem;
+        }
+
+        & .numeros {
+            display: flex;
+            flex-direction: column;
+            font-weight: 300;
+
+            & a {
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+    & .presentacion {
+        margin-block: 1rem;
+
+        & .titulo {
+            
+            & h1 {
+                color: var(--clr-primary);
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+
+            & h2 {
+                font-weight: 700;
+            }
+
+        }
+
+        & p {
+            margin-top: 1rem;
+        }
+    }
+
+    & .botones {
+        display: flex;
+        gap: 0.5rem;
+
+        & button,
+        & a {
+            color: #fff;
+            border: none;
+            padding-inline: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        & button {
+            background-color: var(--clr-primary);
+            border: 2px solid var(--clr-primary);
+            outline: none;
+
+            &:hover {
+                background-color: inherit;
+                color: var(--clr-primary);
+                transition: .2s ease background-color;
+            }
+        }
+
+        & a {
+            text-decoration: none;
+            border: 2px solid var(--clr-primary);
+            & span {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &:hover {
+                background-color: var(--clr-primary);
+                transition: .2s ease background-color;
+            }
+        }
+    }
+}
+
+/* ----------- MAIN ----------- */
+
+.main {
+    margin-block: 2rem;
+    padding: 1rem;
+    color: var(--clr-black);
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        margin-top: .5rem;
+    }
+
+    & .faqs {
+        margin-top: 2rem;
+
+        & .acordeon {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            text-align: left;
+            max-width: 800px;
+            margin: 1rem auto 0 auto;
+
+            & details {
+                border: 2px solid #ccc;
+                padding: .5rem;
+                cursor: pointer;
+                background-color: #cecece50;
+            }
+
+            & summary {
+                color: var(--clr-primary);
+                outline: none;
+            }
+
+        }
+    }
+}
+
+/* ----------- FOOTER ----------- */
+
+.footer {
+    padding: .5rem;
+    background-color: var(--clr-primary);
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+
+    & .telefonos {
+        display: flex;
+        justify-content:space-evenly;
+        margin-block: 2rem;
+
+        & div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+
+            & .numeros {
+                display: flex;
+                    flex-direction: column;
+                gap: 0;
+                animation: none;
+
+                & a:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    & hr {
+        opacity: .4;
+        width: 80%;
+        margin: 0 auto .5rem auto;
+    }
+
+    & span {
+        opacity: .8;
+    }
+
+    & .arrow-up{
+        color: var(--clr-white);
+        width: max-content;
+        margin: 0 auto;
+        animation: arrowAnimation 1s infinite ease-in-out;
+        cursor: pointer;
+
+        & .arrow {
+            font-size: 2rem;
+            color: var(--clr-white);
+        }
+    }
+}
+
+@keyframes arrowAnimation {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px); 
+    }
+}
+
+/* ----------- MEDIAS ----------- */
+
+@media screen and (width > 425px) {
+    
+    header {
+
+        & .presentacion {
+            & p {
+                max-width: 80%;
+                margin: 0 auto;
+            }
+        }
+    
+    }
+
+}
+
+@media screen and (width > 800px) {
+    .hero {
+        gap: 2rem;
+        
+        & .presentacion {
+    
+            & .titulo {
+                
+                & h1 {
+                    font-size: 2.2rem;
+                }
+    
+                & h2 {
+                    font-size: 2.2rem;
+                }
+    
+            }
+    
+            & p {
+                font-size: 1.2rem;
+            }
+
+        }
+    
+        & .botones {
+            display: flex;
+            gap: 0.5rem;
+    
+            & button,
+            & a {
+                font-size: 1rem;
+            }
+    
+        }
+    }
+
+    .main {
+        margin-block: 2rem;
+        padding: 1rem;
+        color: var(--clr-black);
+        
+        h3 {
+            font-size: 2.2rem;
+        }
+    
+        p {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+
+        & .faqs {
+
+            & .acordeon {
+    
+                & details {
+                    font-size: 1.2rem;
+                }
+    
+            }
+        }
+
+    }
+
+    .footer {
+    
+        & .telefonos {
+            & div{
+
+                flex-direction: row;
+
+            }
+        }
+    }
+
+    .pegado {
+        bottom: 20px;
+        right: 40px;
+        height: 70px;
+        width: 70px;
+        & i {
+            font-size: 2.4rem;
+        }
+    
+    }
+}
+
+@media screen and (width > 1000px) {
+    .hero {
+        gap: 1.4rem;
+        
+        & .presentacion {
+
+            & img {
+                width: 70px;
+                height: 70px;
+            }
+    
+            & .titulo {
+                
+                & h1 {
+                    font-size: 4rem;
+                }
+    
+                & h2 {
+                    font-size: 3.5rem;
+                }
+    
+            }
+    
+            & p {
+                font-size: 1.3rem;
+            }
+
+        }
+    
+        & .botones {
+            display: flex;
+            gap: 1rem;
+    
+            & button,
+            & a {
+                padding: .4rem 2rem;
+                font-size: 1rem;
+            }
+    
+        }
+    }
+
+    .main {
+        margin-block: 2rem;
+        padding: 1rem;
+        color: var(--clr-black);
+        
+        h3 {
+            font-size: 3rem;
+        }
+    
+        p {
+            margin-top: 1.2rem;
+            font-size: 1.3rem;
+        }
+    
+        & .faqs {
+            margin-top: 4rem;
+    
+            & .acordeon {
+    
+                & details {
+                    font-size: 1.3rem;
+                }
+    
+            }
+        }
+    }
+}
