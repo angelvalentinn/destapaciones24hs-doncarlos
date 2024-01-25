@@ -155,6 +155,7 @@ body {
             border-radius: 4px;
             text-transform: uppercase;
             height: 60px;
+            opacity: 1;
         }
 
         & button {
@@ -279,7 +280,8 @@ body {
     }
 
     & .arrow-up{
-        color: var(--clr-white);
+        color: #fff;
+        opacity: 1;
         width: max-content;
         margin: 0 auto;
         animation: arrowAnimation 1s infinite ease-in-out;
@@ -287,7 +289,6 @@ body {
 
         & .arrow {
             font-size: 2rem;
-            color: var(--clr-white);
         }
     }
 }

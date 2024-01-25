@@ -1,5 +1,6 @@
 const ask = document.querySelectorAll('.asktowhatsapp');
 const tels = document.querySelectorAll('.call-tel');
+const arrowUp = document.querySelector('.arrow-up');
 
 tels.forEach(e => {
     e.addEventListener('click', e => {
@@ -19,3 +20,5 @@ const askToWhatsapp = cel => {
     const link = `https://wa.me/${cel}?text=Hola, estoy interesado en el servicio de destapaciones.`;
     window.open(link, "_blank");
 }
+
+arrowUp.addEventListener('click', () => window.scrollTo(0,0) )
