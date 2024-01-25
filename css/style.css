@@ -201,7 +201,7 @@ body {
 /* ----------- MAIN ----------- */
 
 .main {
-    height: 750px;
+
     margin-block: 2rem;
     padding: 1rem;
     color: var(--clr-black);
@@ -395,7 +395,7 @@ body {
         }
 
         & .faqs {
-
+            margin-top: 6rem;
             & .acordeon {
     
                 & details {
@@ -491,7 +491,6 @@ body {
         }
     
         & .faqs {
-            margin-top: 4rem;
     
             & .acordeon {
     
