@@ -1,7 +1,6 @@
 const ask = document.querySelectorAll('.asktowhatsapp');
 const tels = document.querySelectorAll('.call-tel');
 
-
 tels.forEach(e => {
     e.addEventListener('click', e => {
         window.location.href = 'tel:' + e.currentTarget.textContent.split('').filter(e => e != "-").join("");
