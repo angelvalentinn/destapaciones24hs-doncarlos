@@ -11,7 +11,7 @@ tels.forEach(e => {
 ask.forEach(elem => {
     
     elem.addEventListener('click', e =>  {
-        askToWhatsapp(e.currentTarget.textContent.split('').filter(e => e != "-").join("") && 1154906707)
+        askToWhatsapp(e.currentTarget.textContent.split('').filter(e => e != "-").join("") === '' ? 1154906707 : e.currentTarget.textContent.split('').filter(e => e != "-").join(""))
         console.log(e.currentTarget.textContent.split('').filter(e => e != "-").join(""));
     })
 })
